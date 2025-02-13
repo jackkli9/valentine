@@ -32,7 +32,7 @@
 <body class="gradient-background">
     <div class="flex items-center justify-center h-screen">
         <div class="flex flex-col items-center p-4">
-            <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
+            <img id="imageDisplay" src="./image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
             <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#1e3a8a] my-4">Will you be my Valentine?</h2>
             <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
                 <button id="yesButton"
@@ -56,9 +56,9 @@
         const responseButtons = document.getElementById('responseButtons');
     
         let noClickCount = 0;
-        let buttonHeight = 50;
+        let buttonHeight = 48;
         let buttonWidth = 80;
-        let fontSize = 20; 
+        let fontSize = 20;
         const imagePaths = [
             "./image1.gif",
             "./image2.gif",
@@ -73,23 +73,23 @@
             if (noClickCount < 5) {
                 noClickCount++;
                 imageDisplay.src = imagePaths[noClickCount];
-                buttonHeight += 35; 
+                buttonHeight += 35;
                 buttonWidth += 35;
-                fontSize += 25; 
-                yesButton.style.height = `${buttonHeight}px`; 
+                fontSize += 25;
+                yesButton.style.height = `${buttonHeight}px`;
                 yesButton.style.width = `${buttonWidth}px`;
-                yesButton.style.fontSize = `${fontSize}px`; 
+                yesButton.style.fontSize = `${fontSize}px`;
                 if (noClickCount < 6) {
-                    noButton.textContent = ["No", "are you sure?", "please megan", "mane", "it's jover", "I'm gonna cry"][noClickCount];
+                    noButton.textContent = ["No", "Are you sure?", "Pookie please", "Don't do this to me :(", "You're breaking my heart", "I'm gonna cry..."][noClickCount];
                 }
             }
         });
     
         yesButton.addEventListener('click', () => {
-            imageDisplay.src = './images/image7.gif'; 
-            valentineQuestion.textContent = "Yay!"; 
-            responseButtons.style.display = 'none'; 
-            confetti(); 
+            imageDisplay.src = './image7.gif';
+            valentineQuestion.textContent = "Yayyy!! :3";
+            responseButtons.style.display = 'none';
+            confetti();
         });
     </script>  
 </body>
